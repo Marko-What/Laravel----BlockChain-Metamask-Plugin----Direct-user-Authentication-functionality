@@ -23,10 +23,6 @@
         });  
       
 
-</script>
-
-<script>
-
 jQuery(document).ready(function(){
   jQuery("button").click(function(){
     jQuery("#wrapper1").remove();
