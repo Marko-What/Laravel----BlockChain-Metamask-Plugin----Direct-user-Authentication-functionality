@@ -1,0 +1,36 @@
+
+
+Backend functionality existed in a loginControllerEth login function does generate 'based on a user data' unique web token which needs to be passed back to client side.
+
+
+
+
+
+	protected routes by the middleware 
+
+		
+		Route::group(['middleware' => ['jwt.auth']], function() {
+	
+	Route::get('/test',function(){
+	return "web token verification passed through ";
+})->name('test');
+
+
+	
+	Could not be accessed without user unique web token which could be passed either as a value of an authorization header or either as a url query token value string.
+
+	Mentioned implementation would be like
+
+		defining functionality which will exist inside an html block tokensFront.blade.php
+		which will be injected on any page which is a reference to a protected route by mentioned above middleware.
+		Implementation would be just like including the block as simple as include footer or header.
+
+		The following block structure should fetch the json token form the json response after successfull authentication and store the value in a variable and also in a localstorage. 
+		Using javascript to construct the http auhorization header with the token value.
+
+		"Authorization":"Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAxMS9ldGhtIiwiaWF0IjoxNTE4NzkxODM3LCJleHAiOjE1MTg3OTU0MzcsIm5iZiI6MTUxODc5MTgzNywianRpIjoiaE9tUmFLV1VnWkRmZ3lQTCJ9.y7ccYkSVOcxY_C2r_XezN6nlLEIktDYbK9E_8G4HCcQ",
+	
+
+	
+
+	
