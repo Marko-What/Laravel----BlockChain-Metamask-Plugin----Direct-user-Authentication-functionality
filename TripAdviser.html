@@ -1,0 +1,855 @@
+<html>
+		<head>
+			<style>
+				body {
+					background-color: #f1f1f1;		
+					margin:0;
+					color: #4a4a4a;
+				}
+				div#wrapper {
+					width:980px;
+					margin: 0 auto;	
+					/*background-color:#f1f1f1;	*/	
+				}
+				div#header {
+					width:100%;
+					/*width:980px;*/
+					padding:15px;
+					/*border:1px solid red;*/
+					height:25px;
+					position:fixed;
+					background-color:white;
+					 z-index: 5;		
+				}
+				div#header img {
+					width:125px;
+					height: auto;
+					padding:5px;			
+				}
+				div#header ul {
+					list-style-type: none;	
+					float:right;
+					/*width:350px;	*/
+					/*background-color: white;*/
+					color:#EAEAEA;	
+					/*margin-bottom:5px;*/
+					margin-top: 10px;
+				}
+				div#header ul li {
+					float:left;
+					padding:5px;
+					border-left:1px solid gray;
+					font-size:12px;
+					text-decoration:none;	
+					color: gray;
+				}
+				div#green {
+					background-color:#589442;
+					width:auto;
+					height:100px;	
+					margin-top: 50px;		
+				}
+				div#green ul {
+					font-size:11px;	
+					color:white;
+					width:980px;
+					margin:0 auto;
+					padding:5px;	
+					height:10px;
+				}
+				div#green ul li {
+					list-style-type: none;	
+					float:left;
+					text-decoration:none;	
+					padding-left:10px;
+					padding-top:10px;			
+				}
+
+				div#green ul li:hover {
+					text-decoration:underline;
+					font-size:12px;				
+				}
+
+				div#green textarea {
+					width:450px;
+					height:45px;
+					color:#4a4a4a;
+					padding:5px;
+					margin: -25px;
+					font-size:14px;
+					font-weight:600;	
+				}
+				div#green button {
+					background-color:#525252;
+					color:white;
+					height: 45px;
+					width:125px;	
+					float:right;
+					font-family:Arial;
+					font-weight:900;
+					font-size:15px;
+				/*	border: 3px solid #2c2c2c;*/
+					 border-top-right-radius: 7px;
+					 border-bottom-right-radius: 7px;
+				}	
+
+				div#green button:hover {
+						background-color:#2c2c2c;
+				}
+				div#textarea_center {
+					width:980px;
+					margin:0 auto;	
+				/*	border:1px solid red;*/
+					text-align:center;		
+				}
+			div#major_con{
+					width:980px;
+					margin:0 auto;
+				/*	border:1px solid red;	*/	
+					height:350px;
+					z-index:3;
+					margin-top:10px;
+				}
+			div#major_con img {
+					height:350px;
+					width:980px;			
+				}
+			div#major_con h3 {
+				font-size: 20px;
+				font-weight:1100;
+				font-style:arial;
+				color:white;
+				position:absolute;
+				padding-left:70px;
+				/*padding-top:10px;*/			
+			}
+			div#onGreen {
+				width: 620px;
+				height: 250px;
+				background-color:#4b7e37;
+				position:absolute;
+				opacity:0.8;	
+				padding:10px;
+				margin-top:50px;
+				margin-left:70px;	
+				z-index:4;
+				display:block;
+			}
+			div#box-box {
+				height:75px;
+				width:590px;
+				margin:5px;
+				padding:5px;
+			/*	border:1px solid orange;*/		
+			}
+			div#box {
+				background-color: #579662;
+				float:left;
+				width:100px;
+				height:70px;
+		/*		border:1px solid red;*/
+				color:white;
+				font-size:12px;
+				text-transform:uppercase;
+				padding:5px;
+				font-weight:900;
+				text-align:center;
+			}
+			div#box:hover {
+				background-color: #4b7e37;
+				border-top:3px solid white;
+				color:yellow;		
+			}
+			div#box.selected {
+				background-color: #4b7e37;
+				color:yellow;	
+				border-top:3px solid white;	
+			}
+			div#onGreen_textarea textarea {
+				background-color:white;
+				height:30px;
+				width: 160px;
+				padding:10px;	
+			}
+
+			div#green textarea.second {
+				background-color: #e9e8e2;			
+			}
+
+			div#onGreen button {
+				background-color: #ffcd00;
+			/*	border: 1px solid #f1a928;*/
+				color:black;
+				font-weight:600;
+				border-radius: 4px;
+				padding:5px;
+			}
+
+			div#onGreen button:hover {
+				background-color:#f1a928;		
+			}
+			.first {
+				width:305px;		
+			}
+
+			div#destination {
+				width:280px;
+				background-color:white;	
+				float:left;
+				padding:5px;	
+				margin:5px;
+				height:auto;
+			}
+			div#destination:hover {
+				 box-shadow: 10px 10px 5px #888888;		
+			}
+			div#destination img {
+				width:280;
+				height:160px;		
+			}
+			div#destination div#destination-describe {
+				width:auto;
+				margin:0 auto;
+				padding:10px;	
+			}
+			span.hotels {
+				font-weight:900;
+				font-size: 11px;
+				/*padding-top:15px;*/
+			}
+			div#button {
+				color:#333;
+				background-color:#ffcd00; 
+			/*	border:1px solid #f1a928;*/
+				border-radius: 4px;
+				float:right;
+				width: 75px;
+				font-size:8px;
+				padding:5px;
+				margin-right:0px;
+			}
+			div#button:hover {
+				background-color:#f1a928;		
+			}
+			div#hotel-review {
+				width:auto;
+				margin:0 auto;	
+				border-top: 1px solid #f6f6f6;	
+				font-size:8px;
+				color: #656565;
+				padding:8px;
+			}
+			div#hotel-review img {
+				width:55px;
+				height: 7px;
+				background-color:#589442;
+			}
+			div#hotel-review a {
+				color:#069;
+				text-decoration:none;		
+			}
+			div#hotel-review a:hover {
+				text-decoration: underline;		
+	   }
+			div#select_destination {
+				/*background-color:#f1f1f1;*/
+				margin:5px;
+				width:980px;
+			/*	border:1px solid blue;*/
+			}
+			div#select_destination ul {
+				list-style-type: none;
+				height:30px;
+				/** box-shadow:1px 1px 15px #888888;*/			
+			}
+			div#select_destination ul li {
+				border:1px solid #cbcac3;
+				text-decoration: none;
+				float:left;
+				padding:5px;
+				font-weight:800;
+				color:#cbcac3;		
+			}
+			
+			div#select_destination ul li.selected {
+				color:#589442;
+				border-bottom:4px solid #589442;
+				background-color:white;
+			}
+			div#select_destination ul li:hover {
+				color:#589442;
+				border-bottom:4px solid #589442;
+				background-color:white;
+			}
+			div#footer {
+				height:150px;
+				border-top:5px solid #589442;
+				margin:0 auto;
+				background-color: #f1f1f1;
+				width:auto;
+				margin:0 auto;	
+				clear:both;			
+			}
+			div#footer div#footer_con {
+				width:980px;
+				margin:0 auto;
+				margin-top:10px;	
+			}
+			div#footer div#footer_con img {
+				height:25px;
+				width:auto;			
+			}
+			div#footer ul {
+				font-size:8px;
+				list-style-type: none;
+				color:#069;
+		
+			}
+			div#footer ul li {
+				text-decoration: none;
+				float:left;
+				padding:5px;
+				border-right: 1px solid gray;
+				height:10px;		
+			}
+			div#footer ul li:hover {
+				text-decoration:underline;
+				color: gray;
+				font-size:10px;		
+			}
+			div#bottom_con {
+				height:75px;
+				width:960px;
+				margin:0 auto;
+				margin-top:10px;
+				font-size:9px;
+				color:#4a4a4a;	
+				margin-bottom: 30px;
+				padding:5px;
+				padding-left:0px;
+		/*		border:1px solid red;*/
+				clear:both;
+				border-top: 1px solid #e7e5d9;
+				
+			}
+			div#bottom_con h2 {
+				font-size: 13px;		
+			}
+			div#destination_pics {
+				width:980px;
+				height:500px;	
+				margin:10px;	
+			}
+			div#line-area {
+			/*	border:1px solid yellow;*/
+				height:35px;
+				width:590px;
+				margin:5px;
+			}
+			div#inline-head {
+				margin:0 auto;
+				width:980px;
+			}
+			div#inline-head img {
+				float:left;
+				margin-left:-125px;		
+			}
+			div#bottom_con_topDestinations {
+				width:980px;
+				height:0 auto;
+			/*	border:1px solid red;*/
+				clear:both;	
+				border-top:1px solid #e7e5d9;
+				height: 300px;	
+			}
+			div#bottom_con_topDestinations  ul {
+					list-style-type: none;	
+					padding-left:0px;
+					margin: 30px 0;
+			}
+			div#bottom_con_topDestinations  ul li {
+					color: #069;
+					float:left;
+					border-right: 2px solid gray;
+					padding: 5px;
+			}		
+	
+			div#bottom_con_topDestinations  ul li:hover {
+					text-decoration:underline;			
+			}
+			bottom_con_topDestinations h4 {
+					font-size:13px;
+					color:#4a4a4a;
+					font-family:arial;		
+			}
+			span.again_green {
+					color:#589442;
+					font-family:arial;
+					font-size:15px;			
+			}
+			div#aft_nav_navigation {
+				width:auto;
+		/*	border:1px solid red;	*/
+				height:30px;
+			}
+			div#aft_nav_navigation ul {
+					list-style-type: none;					
+			}
+      
+			div#aft_nav_navigation ul li {
+					float:left;
+					padding:10px;
+					font-size:11px;
+			  	color:#666666;	
+			}
+      
+			div#aft_nav_navigation ul li:hover {
+					text-decoration:underline;			
+			}
+			div#footer_con img {
+				height:185px;
+				width:auto;				
+			}
+			div#bottom_con_topDestinations.hotels_popular {
+				color:#656565;	
+				height:600px;
+		/*		border:4px solid orange;*/
+			}
+			div#bottom_con_topDestinations.hotels_popular ul {
+				float:left;
+				width:170px;
+				height:400px;	
+		/*		border:1px solid blue;*/
+				padding:10px;
+				margin:10px;
+			}
+			div#bottom_con_topDestinations.hotels_popular ul li {
+				border-right:none;	
+				float:none;
+				width:170px;
+			/*	border:1px solid red;	*/	
+			}
+			div#bottom_con_topDestinations.hotels_popular .again_green {
+		/*		border:1px solid red;*/
+				padding:10 0px;
+				font-weight:500;
+				/*height:20px;	*/		
+			}
+			.vacation {
+				/*display:none;	*/		
+			}
+		
+			 span.niceGreenLine {
+				width:0px;
+				height: 1px;
+				background-color: #589442;
+				transition: width 1.9s;
+				position: absolute;
+				margin-top: 39px;
+				position: absolute;
+				left: 0;
+        box-shadow: 1px 1px 2px #589442;	
+			}
+			div#header:hover span.niceGreenLine {
+				width:100%;
+				 box-shadow: 1px 1px 2px #589442;	
+			}
+
+
+			</style>
+		</head>
+	<body>
+	<div id="header">
+	
+		<div id="inline-head">
+		<img src="tripadviser.png"></img>
+		
+		<ul>
+			<li>Review</li>
+			<li>JOIN</li>
+			<li>LOGIN</li>
+			<li>$</li>	
+		</ul>
+		</div><!-- end of inline-head div-->
+
+	<span class="niceGreenLine"></span>
+	</div><!-- end of header div-->
+
+	<br />
+	<br />
+	<div id="green">
+		<ul>
+			<li>Hotels</li>
+			<li>Flights</li>
+			<li>Vacation Rentals</li>
+			<li>Restaurants</li>
+			<li>Things to do</li>
+			<li>Best od 2017</li>	
+		</ul>
+		<br />
+		<div id="textarea_center">
+		<textarea>Find:</textarea>
+		<textarea class="second">Near:</textarea>
+
+		<button>Search</buttom>
+		</div><!-- end of textarea_center div-->
+	</div><!-- end of green div-->
+
+	<div id="wrapper">
+
+	<div id="major_con">
+		<h3>Shop here for the lowest hotel prices </h3>
+		<div id="onGreen">
+		 <div id="box-box">
+			<div id="box" class="hotels">HOTELS</div><!-- endo of box-->
+			<div id="box" class="selected vacation">VACATION RENTALS</div><!-- endo of box-->
+			<div id="box" class="things">THINGS TO DO</div><!-- endo of box-->
+			<div id="box" class="restaurants">RESTAURANTS</div><!-- endo of box-->
+			<div id="box" class="flights">FLIGHTS</div><!-- endo of box-->
+		</div><!-- endo ofbox-box-->	
+		
+		
+			<div id="onGreen_textarea" class="vacation">
+				<div id="line-area">	
+			<textarea class="first">Find:</textarea>
+			<textarea>date:</textarea>
+			<textarea>date:</textarea>
+				</div><!-- end of on line-area"-->		
+		
+			<div id="line-area">
+			<textarea>date:</textarea>
+			<textarea>date:</textarea>
+			<textarea>date:</textarea>
+				
+			
+				</div><!-- end of on line-area"-->	
+		<button>Find Hotels</buttom>
+			</div>
+			
+		</div><!-- end of on green div-->
+		<img src="3.jpg" />
+	</div><!--end of major cont div -->
+	<br />
+	<div id="aft_nav_navigation">
+			<ul>
+				<li>Europe ></li>
+				<li>Austria ></li>
+				<li>Austria Alps ></li>
+				<li>Cahtinia ></li>
+				<li>Klagenfurth ></li>	
+				<li>Things to Do in Austria ></li>
+						
+			</ul>	
+	</div><!-- nav aft_nav_navigation-->
+
+	<div id="select_destination">
+		<ul>
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li class="selected">Mexico & Carribean</li>
+			<li>Central & South America</li>
+			<li>Europe</li>
+			<li>Asia</li>
+			<li>ElseWhere</li>
+		
+		</ul>
+
+	</div> <!-- end select destination-->
+	
+	<br />	
+	
+	<div id="destination_pics"><!--destination_pics div-->
+
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+	
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+	
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+	
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+	
+		<div id="destination">
+				<img src="3.jpg" />
+				<div id="destination-describe">
+				<span class="hotels">1,087 hotels <div id="button">view Details</div><!-- end of button div --></span> <!-- end of hotels class-->	
+				</div><!-- end of destination-describe div-->
+				<br />
+				<div id="hotel-review">
+					<img src="#" / >
+					<a href="#">Hotel 41</a> 2,630 reviews 	
+					<br />					
+					<img src="#" / >
+					<a href="#">The Milestone Hotel</a> 1,808 reviews 			
+				</div><!-- end of hotel-review div-->
+			</div><!-- end of destination div-->
+
+	</div><!-- end of destination_pics div-->
+	<br />	
+
+	<div id="bottom_con_topDestinations" class="hotels_popular">
+			<h4>Hotels in popular destinations</h4>
+	Shopping for hotels? You’re in the right place. With millions of reviews from travelers worldwide, we can help you find the ideal hotel, inn or bed & breakfast. And when you’re ready to book, we check 200+ sites to find you the latest and lowest hotel prices. It’s all right here on TripAdvisor!
+	<br />	
+	<span class="again_green">United States & Canada</span> 
+	<br />	
+	<ul>
+			<li>Aspen Tourism </li>
+			<li> Bath Tourism</li>
+			<li>Mexico & Carribean</li>
+			<li>Bethesda Tourism</li>
+			<li> Bohemia Tourism</li>
+			<li>Asia</li>
+			<li>Brooklyn Tourism </li>	
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li>Central & South America</li>
+			
+	</ul>
+
+
+	<ul>
+			<li>Aspen Tourism </li>
+			<li> Bath Tourism</li>
+			<li>Mexico & Carribean</li>
+			<li>Bethesda Tourism</li>
+			<li> Bohemia Tourism</li>
+			<li>Asia</li>
+			<li>Brooklyn Tourism </li>	
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li>Central & South America</li>
+			
+	</ul>
+	
+		<ul>
+			<li>Aspen Tourism </li>
+			<li> Bath Tourism</li>
+			<li>Mexico & Carribean</li>
+			<li>Bethesda Tourism</li>
+			<li> Bohemia Tourism</li>
+			<li>Asia</li>
+			<li>Brooklyn Tourism </li>	
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li>Central & South America</li>
+			
+	</ul>
+
+		<ul>
+			<li>Aspen Tourism </li>
+			<li> Bath Tourism</li>
+			<li>Mexico & Carribean</li>
+			<li>Bethesda Tourism</li>
+			<li> Bohemia Tourism</li>
+			<li>Asia</li>
+			<li>Brooklyn Tourism </li>	
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li>Central & South America</li>
+			
+	</ul>
+
+		</div><!-- end ofbottom_con_topDestinations-->
+
+
+
+		<div id="bottom_con_topDestinations">
+			<h4>Top Destinations:</h4>
+						<span class="again_green">Featured Destinations</span> Reviewed by travellers on TripAdvisor
+	<ul>
+			<li>Aspen Tourism </li>
+			<li> Bath Tourism</li>
+			<li>Mexico & Carribean</li>
+			<li>Bethesda Tourism</li>
+			<li> Bohemia Tourism</li>
+			<li>Asia</li>
+			<li>Brooklyn Tourism </li>	
+			<li>Worldwide</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li>Central & South America</li>
+			<li>Brooklyn Tourism </li>
+			<li>Asia</li>
+			<li>ElseWhere</li>
+			<li>Kobe Tourism</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li> Syracuse Tourism</li>
+			<li>Europe</li>
+			<li>Asia</li>
+			<li>ElseWhere</li>
+			<li>Central & South America</li>
+			<li>Brooklyn Tourism </li>
+			<li>Asia</li>
+			<li>ElseWhere</li>
+			<li>Kobe Tourism</li>
+			<li>USA & Canada</li>
+			<li>Mexico & Carribean</li>
+			<li> Syracuse Tourism</li>
+			<li>Europe</li>
+			<li>Asia</li>
+		
+		</ul>
+		
+		</div><!-- end ofbottom_con_topDestinations-->
+
+
+		<div id="bottom_con">
+			<h2> worlds largestsed travel site. Know better. Book better. Go better.</h2>
+			At TripAdvisor, we believe in the power of travel — and in helping you make the most of every trip. With sdaover 435 million candid traveler reviews, we can help you make the right choice when you shop for hotels, restaurants and attractions. You'll also find low airfares, free travel guides, worldwide vacation rental listings, popular forums with advice about virtually every destination, and more. When it’s time to book, we can help you save up to 30% on hotels, checking 200+ sites to find you today’s lowest prices. And when you’re on your trip, our free mobile app is your ultimate travel companion.
+		</div><!-- end of bottom_con-->
+		
+
+
+	</div><!-- end of wrapper div -->	
+
+			<div id="footer">
+			<div id="footer_con">
+				<img src="tripadviser.png" />
+			
+				
+			<ul>
+					<li>About Us</li>
+					<li>Write a Review</li>
+					<li>Carrers</li>
+					<li>MemeberShip</li>
+					<li>Blog</li>
+					<li>Site Map</li>
+					<li>Become an Affiliate</li>
+					<li>The TripAdviser</li>
+					<li>Traveler's Store</li>
+					<li>Traveler's Choice</li>
+					<li>Owners</li>
+					<li>Business Advantage</li>
+					<li>DMO/CVB</li>
+					<li>Investor Relations</li>
+					<li>Help Center</li>
+			
+				</ul>
+			
+				</div><!-- end of footercon-->
+			</div><!-- end of footer div-->
+	
+    </body>
+	</html>
