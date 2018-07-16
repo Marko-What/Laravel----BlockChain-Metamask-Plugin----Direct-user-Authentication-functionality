@@ -6,7 +6,8 @@
 	</div>
 
 <script>
-
+	url = window.location.href;
+	urlA = url + "ethm";
 
 	web3.eth.getAccounts(function(error, accounts) {
    		console.log(accounts);   
@@ -16,7 +17,9 @@
 		var valuePost = accounts[0];
 		confirm(valuePost); 
 	
-	document.body.innerHTML += '<form id="ethm" action="http://127.0.0.1:8888/ethm" method="post"><input id="ethidinput" type="hidden" name="ethid" value="www"></form>';
+	document.body.innerHTML += '<form id="ethm"  method="post"><input id="ethidinput" type="hidden" name="ethid" value="www"></form>';
+
+	document.getElementById('ethm').action = urlA;	
 
 	document.getElementById("ethidinput").value = valuePost;
 
